@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
@@ -14,7 +14,7 @@
 		<PackageTags>VkNet;NLog;Microsoft.Extensions.Configuration;log;logfiles;netcore;nlog</PackageTags>
 		<AssemblyTitle>$(Title)</AssemblyTitle>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<VersionPrefix>1.3.0</VersionPrefix>
+		<VersionPrefix>1.3.1</VersionPrefix>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
@@ -26,18 +26,18 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
-		<PackageReference Include="NetFx.Extensions.Configuration.EnvironmentVariables" Version="2.1.1"/>
-		<PackageReference Include="NetFx.Extensions.Configuration.Ini" Version="2.1.1"/>
-		<PackageReference Include="NetFx.Extensions.Configuration.Json" Version="2.1.1"/>
-		<PackageReference Include="NetFx.Extensions.Configuration.Xml" Version="2.1.1"/>
-	</ItemGroup>
+		<PackageReference Include="NetFx.Extensions.Configuration.EnvironmentVariables" Version="2.2.0"/>
+		<PackageReference Include="NetFx.Extensions.Configuration.Ini" Version="2.2.0"/>
+		<PackageReference Include="NetFx.Extensions.Configuration.Json" Version="2.2.0"/>
+		<PackageReference Include="NetFx.Extensions.Configuration.Xml" Version="2.2.0"/>
 
-	<ItemGroup>
-		<PackageReference Include="NLog" Version="4.5.10"/>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
 		<PackageReference Include="Weakly" Version="2.8.1"/>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="4.5.11"/>
 	</ItemGroup>
 
 </Project>

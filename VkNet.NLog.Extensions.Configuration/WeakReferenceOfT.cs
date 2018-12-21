@@ -24,7 +24,9 @@ namespace System
 		internal WeakReference(SerializationInfo info, StreamingContext context)
 		{
 			if (info == null)
+			{
 				throw new ArgumentNullException(nameof(info));
+			}
 
 			Create((T) info.GetValue("TrackedObject", typeof(T)), info.GetBoolean("TrackResurrection"));
 		}
@@ -34,7 +36,7 @@ namespace System
 			var target1 = Target;
 			target = target1;
 
-			return (object) target1 != null;
+			return target1 != null;
 		}
 
 		public void SetTarget(T target)
@@ -58,9 +60,11 @@ namespace System
 		public void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
 			if (info == null)
+			{
 				throw new ArgumentNullException(nameof(info));
+			}
 
-			info.AddValue("TrackedObject", (object) Target, typeof(T));
+			info.AddValue("TrackedObject", Target, typeof(T));
 			info.AddValue("TrackResurrection", IsTrackResurrection());
 		}
 
