@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net40;net45;net461;netstandard2.0</TargetFrameworks>
 		<Title>VkNet.NLog.Extensions.Configuration for $(TargetFramework)</Title>
 		<Product>VkNet.NLog.Extensions.Configuration v$(ProductVersion)</Product>
 		<InformationalVersion>$(ProductVersion)</InformationalVersion>
@@ -14,7 +14,7 @@
 		<PackageTags>VkNet;NLog;Microsoft.Extensions.Configuration;log;logfiles;netcore;nlog</PackageTags>
 		<AssemblyTitle>$(Title)</AssemblyTitle>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<VersionPrefix>1.3.1</VersionPrefix>
+		<VersionPrefix>1.3.2</VersionPrefix>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
